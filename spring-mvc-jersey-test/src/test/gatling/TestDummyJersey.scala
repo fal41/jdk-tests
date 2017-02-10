@@ -24,6 +24,6 @@ class TestDummyJersey extends Simulation {
     }
 
   setUp(
-    scn.inject(rampUsers(100) over(2 seconds))
+    scn.inject(rampUsers(800) over(2 seconds))
   ).protocols(httpConf)
 }
