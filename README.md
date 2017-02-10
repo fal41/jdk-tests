@@ -1,3 +1,8 @@
+Pre-requisites
+=====================
+Install OpenJDK and IBM Java for comparison
+Install latest Maven 3
+
 Java micro benchmarks
 =====================
 Go to ```jmh-jdk-test```
@@ -8,8 +13,13 @@ Run ```java -jar target/benchmarks.jar```
 
 spring-mvc-jersey-test
 ======================
-Run ```mvn clean install```
 
-Deploy ```target/spring-mvc-jersey-test-0.0.1-SNAPSHOT.war``` to Tomcat 8
+Run:
 
-Run ```src/test/gatling/TestDummyJersey``` test in gatling tool to generate load
+```fetchTools.sh``` to download required tools
+
+```buildAndInstall.sh``` to build example application and copy gatling test to the gatling tool
+
+```startTomcat.sh``` to start tomcat 8
+
+```startGatling.sh``` to start gatling tool that generates load. Run simulation: TestDummyJersey
